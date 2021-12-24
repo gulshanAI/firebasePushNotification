@@ -5,7 +5,6 @@
         margin-bottom: 15px;
     }
 </style>
-
 <body>
     <center>
         <h2>Notification Panel</h2>
@@ -21,40 +20,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-messaging.js"></script>
     <script>
-        $(".firebasesub").click(function (e) {
-            e.preventDefault();
-            alert("cxvxcv");
-            callaj()
-        });
-
-        function callaj() {
-            $.ajax({
-                type: 'POST',
-                url: "https://fcm.googleapis.com/fcm/send",
-                headers: {
-                    Authorization: 'key=AAAA9f13vs8:APA91bEM7W7z8roCxYUizgKQZDhHx05umspYoQvmN_AcTVP8C2i4NB8TFkKFijGXFm7lxArzQ3zaXI48uLc1T6YhNM9QGuJkBAzhpkEfpwPuC3c1rKmOGmML9Kn3bygO2UhFNnFB_rhf'
-                },
-                contentType: 'application/json',
-                dataType: 'json',
-                data: JSON.stringify({
-                    "to": "ekRgxM8s4wCFEmOGgxOJGv:APA91bGHgG3N5Cjy5j8y3BK5kD_hht99tsRMfNorJgRotnp0i5n8DwJE3a65ikL8nWIsLNj_l3g9T2EugbhhjAwx0J6woN0Ti8HtRt25ZyKZHFEPWpJCnx9z72MGfF1qLZG3x9BU0bdZ",
-                    "priority": "high",
-                    "notification": {
-                        "title": "test",
-                        "body": "shisdhdsf"
-                    }
-                }),
-                success: function (responseData) {
-                    alert("Success");
-                },
-                error: function (jqXhr, textStatus, errorThrown) {
-                    /*alert("Fail");*/ // alerting "Fail" isn't useful in case of an error...
-                    alert("Status: " + textStatus + "\nError: " + errorThrown);
-                }
-            });
-        }
-
-
         MsgElem = document.getElementById('msg');
         TokenElem = document.getElementById('token');
         NotisElem = document.getElementById('notis');
@@ -72,7 +37,6 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-
 
         const messaging = firebase.messaging();
         messaging
@@ -107,9 +71,5 @@
             }
         });
     </script>
-
-
-
 </body>
-
 </html>
