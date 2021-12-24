@@ -9,7 +9,7 @@ curl -X POST -H "Authorization: key=$SERVER_KEY" -H "Content-Type: application/j
     "notification": {
         "title": "FCM Message",
         "body": "This is an FCM Message",
-        "icon": "/itwonders-web-logo.png",
+        "icon": "/touchmediaAds.png",
     }
   },
   "to": "$DEVICE_REG_TOKEN"
